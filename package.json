@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"scripts": {
 		"build": "npm run flush && webpack --env production && cd src/client && npm run build && cd ../.. && npm start",
+		"deploy": "git add . && git commit -m Deploy && git push heroku master",
 		"dev": "npm run flush && concurrently --kill-others \"cd src/client && npm start\" \"webpack\"",
 		"flush": "rimraf dist/*",
 		"start": "node dist/index.js",
