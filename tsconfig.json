@@ -9,8 +9,8 @@
 		"module": "node16",
 		"moduleResolution": "node",
 		"target": "ESNext",
-		"outDir": "out",
-		"rootDir": "src",
+		"outDir": "dist",
+		"rootDir": "src/server",
 		"esModuleInterop": true,
 		"lib": [
 			"ESNext",
