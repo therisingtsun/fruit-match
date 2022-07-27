@@ -1,0 +1,58 @@
+.game-board {
+	cursor: not-allowed;
+
+	&.--current-player {
+		cursor: unset;
+
+		.game-board-card {
+			pointer-events: all;
+		}
+	}
+
+	.game-board-card {
+		user-select: none;
+		pointer-events: none;
+	
+		position: relative;
+		border: 0.1em solid transparent;
+		cursor: pointer;
+		
+		img, .card-back {
+			backface-visibility: hidden;
+			height: 6em;
+			width: 6em;
+			object-fit: contain;
+			transform: rotateY(180deg);
+			transition: all 0.25s ease-in;
+			filter: drop-shadow(0 2px 2px hsla(0, 0%, 7%, 0.25));
+			
+			&.card-back {
+				background-color: white;
+				position: absolute;
+				inset: 0;
+				transform: rotateY(0deg);
+			}
+		}
+	
+		&.game-end {
+			img, .card-back {
+				height: 4em;
+				width: 4em;
+			}
+		}
+	
+		&.--flipped {
+			img {
+				transform: rotateY(0deg);
+			}
+	
+			.card-back {
+				transform: rotateY(180deg);
+			}
+		}
+	
+		&:hover {
+			border-color: red;
+		}
+	}
+}
