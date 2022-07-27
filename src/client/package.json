@@ -24,7 +24,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "set BUILD_PATH=../../dist/public&& react-scripts build",
-		"heroku-build": "BUILD_PATH=../../dist/public&& react-scripts build"
+		"heroku-build": "react-scripts build"
 	},
 	"browserslist": {
 		"production": [
