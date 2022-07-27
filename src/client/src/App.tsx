@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState, createContext } from "react";
 import io from "socket.io-client";
-import "./App.scss";
 import { Game as GameDataType } from "../../server/index";
 import { Box, Button, Container, Grid, List, ListItem, TextField, Typography } from "@mui/material";
 import { SnackbarProvider, useSnackbar, VariantType } from "notistack";
