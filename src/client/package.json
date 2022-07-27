@@ -23,7 +23,8 @@
 	"proxy": "http://localhost:8000",
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "set BUILD_PATH=../../dist/public&& react-scripts build"
+		"build": "set BUILD_PATH=../../dist/public&& react-scripts build",
+		"heroku-build": "BUILD_PATH=../../dist/public&& react-scripts build"
 	},
 	"browserslist": {
 		"production": [
